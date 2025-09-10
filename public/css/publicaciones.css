@@ -1,0 +1,644 @@
+/* ===== PÁGINA DE PUBLICACIONES ===== */
+
+/* Sección principal */
+-publi {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f000 100%);
+    padding: 20px 0;
+}
+
+/* Título principal */
+#section-publi h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 20px 0 30px 12px;
+    position: relative;
+    top: 90px;
+    left: 80px;
+    letter-spacing: 1px;
+}
+
+#section-publi h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+}
+
+/* Container principal */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#Publicaciones {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ===== CONTENIDO 1 - PUBLICACIONES EXISTENTES (GRID) ===== */
+.contenido1 {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.contenido1::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contenido1::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.contenido1::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+.contenido1::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* GRID LAYOUT PARA PUBLICACIONES */
+.fila1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Estilos para las tarjetas de publicaciones (si las necesitas) */
+.publicacion-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.publicacion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+}
+
+.publicacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.publicacion-card:nth-child(odd) {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.publicacion-card:nth-child(even) {
+    animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== CONTENIDO 2 - FORMULARIO DE REGISTRO ===== */
+.contenido2 {
+    flex: 1.2;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.fila1_1 {
+    width: 100%;
+}
+
+/* Título del registro */
+.tituloRe {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.tituloRe::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    border-radius: 2px;
+}
+
+/* Título "Inmuebles" */
+.text-center {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== FORMULARIO ===== */
+.col-4 {
+    width: 100%;
+    padding: 0 !important;
+}
+
+/* Contenedor flex para las dos columnas */
+.contenido2 > .fila1_1 > div[style*="display: flex"] {
+    display: flex !important;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contenido2 > .fila1_1 > div[style*="display: flex"] > div {
+    flex: 1;
+}
+
+/* ===== LABELS ===== */
+#letras-publicacion,
+.form-label {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 5px;
+}
+
+#letras-publicacion::before,
+.form-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 2px;
+}
+
+/* ===== INPUTS ===== */
+.form-control,
+input[type="file"],
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    background: #f8fafc;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-control:focus,
+input[type="file"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+    box-shadow: 
+        0 0 0 4px rgba(59, 130, 246, 0.15),
+        inset 0 2px 4px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+}
+
+.form-control:hover,
+input[type="file"]:hover,
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="date"]:hover,
+select:hover,
+textarea:hover {
+    border-color: #8b5cf6;
+    background: #ffffff;
+}
+
+/* ===== INPUTS FILE PERSONALIZADOS ===== */
+input[type="file"] {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border: 2px dashed #3b82f6;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: linear-gradient(45deg, #404040, #878787);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: linear-gradient(45deg, #2563eb, #7c3aed);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== SELECT PERSONALIZADO ===== */
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+select:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* ===== MAPA ===== */
+#mapa {
+    height: 400px !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    border: 3px solid #3b82f6 !important;
+}
+
+/* ===== INPUTS DE DIRECCIÓN ===== */
+#tipo_via,
+#numero,
+#ciudad {
+    margin-bottom: 10px;
+}
+
+/* ===== BOTÓN REGISTRAR ===== */
+.btn-primary {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #2563eb, #7c3aed);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== GRUPOS DE FORMULARIO ===== */
+.mb-3 {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* ===== EFECTOS DE VALIDACIÓN ===== */
+.form-control:valid {
+    border-color: #10b981;
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    #Publicaciones {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contenido1,
+    .contenido2 {
+        flex: none;
+        width: 100%;
+    }
+    
+    /* Grid sigue siendo 2x2 en tablet */
+    .fila1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #section-publi h1 {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .contenido1,
+    .contenido2 {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .contenido2 > .fila1_1 > div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    
+    #mapa {
+        height: 300px !important;
+    }
+    
+    .tituloRe {
+        font-size: 1.5rem;
+    }
+    
+    .text-center {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+    
+    /* Grid cambia a 1 columna en móvil */
+    .fila1 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #section-publi h1 {
+        font-size: 1.8rem;
+        margin-left: 15px;
+    }
+    
+    .contenido1,
+    .contenido2 {
+        padding: 15px;
+        border-radius: 12px;
+    }
+    
+    .form-control,
+    input[type="file"],
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    #mapa {
+        height: 250px !important;
+    }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenido1,
+.contenido2 {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.contenido2 {
+    animation-delay: 0.2s;
+}
+
+/* ===== EFECTOS ADICIONALES ===== */
+.form-control:focus + label,
+input:focus + label {
+    color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+/* Placeholder personalizado */
+.form-control::placeholder,
+input::placeholder {
+    color: #64748b;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.form-control:focus::placeholder,
+input:focus::placeholder {
+    opacity: 0.5;
+}
+
+/* ===== LEAFLET MAP CUSTOMIZATION ===== */
+.leaflet-control-zoom a {
+    background: #3b82f6 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background: #2563eb !important;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}
+
+/* ===== LOADING STATES ===== */
+.form-control:disabled,
+input:disabled,
+select:disabled {
+    background: #e2e8f0;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== FOCUS VISIBLE ===== */
+.btn-primary:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+.form-control:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* ===== EFECTOS ESPECIALES PARA GRID ===== */
+.publicacion-card:nth-child(4n+1),
+.publicacion-card:nth-child(4n+2) {
+    animation-delay: 0.1s;
+}
+
+.publicacion-card:nth-child(4n+3),
+.publicacion-card:nth-child(4n+4) {
+    animation-delay: 0.3s;
+}
+
+/* Hover effect para toda la fila */
+.fila1:hover .publicacion-card:not(:hover) {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+/* ===== PALETA DE COLORES ALTERNATIVA ===== */
+/* Si quieres usar otros colores, descomenta una de estas secciones: */
+
+/* OPCIÓN 1: Naranja y Rosa */
+/*
+#section-publi h1::after,
+.tituloRe::after {
+    background: linear-gradient(90deg, #f97316, #ec4899);
+}
+
+.text-center {
+    background: linear-gradient(135deg, #f97316, #ec4899);
+}
+
+#letras-publicacion::before,
+.form-label::before {
+    background: #f97316;
+}
+
+.form-control:focus,
+input:focus,
+select:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #f97316, #ec4899);
+}
+*/
+
+/* OPCIÓN 2: Teal y Cyan */
+/*
+#section-publi h1::after,
+.tituloRe::after {
+    background: linear-gradient(90deg, #0d9488, #06b6d4);
+}
+
+.text-center {
+    background: linear-gradient(135deg, #0d9488, #06b6d4);
+}
+
+#letras-publicacion::before,
+.form-label::before {
+    background: #0d9488;
+}
+
+.form-control:focus,
+input:focus,
+select:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #0d9488, #06b6d4);
+}
+*/

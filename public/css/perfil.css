@@ -1,0 +1,502 @@
+/* Contenido principal */
+.contenido {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Sección del perfil */
+.perfil {
+    background: #10b981;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.perfil h4 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+/* Información del perfil */
+.information {
+    display: grid;
+    grid-template-columns: 250px 1fr 180px;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+/* Contenedor de imagen de perfil */
+.profile-image-container {
+    position: relative;
+}
+
+#profileImage {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+#profileImage:hover {
+    transform: scale(1.05);
+}
+
+/* Información del usuario */
+.information > div:nth-child(2) {
+    padding: 15px 0;
+}
+
+.information h5 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.information h4 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.information h7 {
+    display: block;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón actualizar perfil */
+.changeN {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.changeN:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+}
+
+/* Modal personalizado */
+.modal-content.act-1 {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+}
+
+.modal-header {
+    background: #10b981;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+    padding: 25px 30px;
+}
+
+.modal-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.act-perfil {
+    padding: 40px;
+}
+
+.act-perfil label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.act-perfil input[type="text"],
+.act-perfil input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #10b981;;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.act-perfil input[type="text"]:focus,
+.act-perfil input[type="file"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* Botón CRUDS */
+.crud {
+    margin-top: 25px;
+}
+
+.crd {
+    background: linear-gradient(45deg, #dc3545, #e74c3c);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.crd:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 53, 69, 0.5);
+}
+
+/* Redes sociales */
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.redes a {
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    padding: 12px;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.redes a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.redes img {
+    width: 45px !important;
+    height: 45px;
+}
+
+/* Descripción */
+.descripcion {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.desc h4 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #667eea;
+    display: inline-block;
+}
+
+.descripcion p {
+    color: #6c757d;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+/* Sección favoritos */
+.fav {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.fav h4 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fav img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Grid de favoritos */
+.favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    background: white;
+    padding: 40px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+/* Tarjetas de favoritos */
+.fav-card {
+    background: #f8f9fa;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.fav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.fav-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fav-card:hover img {
+    transform: scale(1.08);
+}
+
+.fav-card p {
+    padding: 20px;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.fav-card p:first-of-type {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.fav-card p:nth-of-type(2) {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.fav-card p.precio {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Ocultar el aside de publicidad */
+.carousel-aside {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .contenido {
+        max-width: 1100px;
+        padding: 25px;
+    }
+    
+    .information {
+        grid-template-columns: 220px 1fr 160px;
+        gap: 35px;
+        padding: 35px;
+    }
+    
+    #profileImage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        padding: 20px;
+    }
+    
+    .information {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+        padding: 30px;
+    }
+    
+    #profileImage {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+    
+    .redes {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .favoritos {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+    
+    .perfil h4 {
+        font-size: 1.8rem;
+    }
+    
+    .perfil {
+        padding: 25px;
+    }
+    
+    .descripcion,
+    .fav,
+    .favoritos {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido {
+        padding: 15px;
+    }
+    
+    .information,
+    .descripcion,
+    .fav,
+    .favoritos {
+        padding: 20px;
+    }
+    
+    .perfil {
+        padding: 20px;
+    }
+    
+    #profileImage {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .perfil h4 {
+        font-size: 1.6rem;
+    }
+    
+    .information h5 {
+        font-size: 1.3rem;
+    }
+    
+    .desc h4,
+    .fav h4 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.information,
+.descripcion,
+.fav,
+.favoritos {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Mejoras en iconos */
+.information img {
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+}
+
+/* Hover effects para botones del modal */
+.btn {
+    transition: all 0.3s ease;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    border: none;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    position: relative;
+    left: 150px;
+}
+
+.btn-success:hover {
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #dc3545, #e74c3c);
+    border: none;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* Efectos adicionales para mejorar la experiencia */
+.fav-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fav-card a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mejora en el espaciado general */
+.contenido > * {
+    margin-bottom: 40px;
+}
+
+.contenido > *:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,581 @@
+.title{
+    background-color: #10b981;
+    padding-bottom: 20px;
+}
+.title h1{
+    position: relative;
+    top: 10px;
+}
+.sub{
+    display: flex;
+    width: 420px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    left: 75px;
+    padding-bottom: 25px;
+    background-color: #444444;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.sub h3{
+    position: relative;
+    display: flex;
+    top: 15px;
+}
+/* General para el footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* Contenedor principal de la página */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+/*Inicio del estilo del FOOTER*/
+footer {
+    position: relative;
+    top: 15vh; /* Ajustado para mejor proporción */
+    clear: both;
+    background: #262626;
+    color: #fff;
+    padding: 40px 0 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+    border-top: 3px solid #10b981; /* Línea verde que coincide con tu header */
+    transition: all 0.3s ease;
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+}
+
+/* Logo del footer */
+.footer-logo h3 {
+    font-size: 2rem;
+    color: #10b981; /* Verde que coincide con tu header */
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.footer-logo h3:hover {
+    transform: scale(1.05);
+    color: #059669;
+    text-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* Información de contacto */
+.footer-contact {
+    text-align: center;
+    position: relative;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #ecf0f1;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.footer-contact .email {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.footer-contact a {
+    color: #10b981; /* Verde consistente */
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.footer-contact a:hover {
+    color: #ffffff;
+    background-color: #10b981;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.footer-contact a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background: #10b981;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.footer-contact a:hover::after {
+    width: 100%;
+}
+
+/* Redes sociales */
+.footer-social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    color: #ecf0f1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-icon:hover::before {
+    left: 100%;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+    background: #10b981;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    border-color: #059669;
+}
+
+.social-icon:nth-child(1):hover {
+    background: #1877f2; /* Facebook blue */
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+}
+
+.social-icon:nth-child(2):hover {
+    background: #1da1f2; /* Twitter blue */
+    box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4);
+}
+
+.social-icon:nth-child(3):hover {
+    background: #0077b5; /* LinkedIn blue */
+    box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+/* Sección de copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.footer-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #10b981, transparent);
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #bdc3c7;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.footer-bottom:hover p {
+    opacity: 1;
+}
+
+/* Efectos especiales para favoritos */
+.footer-favorite-added {
+    animation: favoriteGlow 2s ease-out;
+}
+
+@keyframes favoriteGlow {
+    0% {
+        box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+        border-top-color: #10b981;
+    }
+    50% {
+        box-shadow: 0 -8px 32px rgba(16, 185, 129, 0.3), 0 0 50px rgba(16, 185, 129, 0.2);
+        border-top-color: #059669;
+        transform: translateY(-3px);
+    }
+    100% {
+        box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+        border-top-color: #10b981;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de shimmer cuando se añade favorito */
+.footer-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3), transparent);
+    animation: shimmer 1.5s ease-out;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        top: 10vh; /* Menos espacio en móviles */
+        padding: 30px 0 15px 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .footer-logo h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    .footer-contact {
+        order: 2;
+    }
+    
+    .footer-contact p {
+        position: static; /* Resetear posiciones relativas en móvil */
+        right: auto;
+    }
+    
+    .footer-contact .email {
+        position: static;
+        right: auto;
+    }
+    
+    .footer-social {
+        order: 3;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        top: 8vh;
+        padding: 25px 0 15px 0;
+    }
+    
+    .footer-container {
+        padding: 0 15px;
+        gap: 20px;
+    }
+    
+    .footer-logo h3 {
+        font-size: 1.4rem;
+    }
+    
+    .footer-contact p {
+        font-size: 0.9rem;
+    }
+    
+    .footer-social {
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.social-icon:focus {
+    outline: 3px solid #10b981;
+    outline-offset: 2px;
+}
+
+.footer-contact a:focus {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+}
+
+/* Efectos adicionales sutiles */
+footer:hover {
+    transform: translateY(-2px);
+}
+
+.footer-container > div {
+    transition: transform 0.3s ease;
+}
+
+.footer-container > div:hover {
+    transform: translateY(-3px);
+}
+
+/* Partículas decorativas (opcional) */
+.footer-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 20%;
+    width: 4px;
+    height: 4px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 
+        20px 10px 0 #10b981,
+        40px -5px 0 #059669,
+        -10px 15px 0 #10b981,
+        60px 20px 0 #059669;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}/*Fin de ESTILO FOOTER*/
+.combito, .combito1{
+    background: transparent;
+    width: 300px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #c2c2c2;
+}
+.combito1{
+    left: 80px;
+}
+.combito{
+    left: 60px;
+}
+.salir{
+  position: relative;
+  left: 1800px;
+  bottom: 35px;
+  color: inherit;
+}
+.salir1 i{
+  text-decoration: none;
+  list-style: none;
+  transition: transfomr 0.3s ease-in-out;
+}
+.salir i:hover{
+  transform: scale(1.05);
+}
+.salir svg:hover{
+  transform: scale(1.05);
+}
+.notifi {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 20px;
+            width: 600px;
+            background-color:rgba(51, 51, 51, 0.63);
+        }
+        .notifi1 {
+            background:rgb(32, 40, 63);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px 0;
+            border-left: 5px solid #ff9800;
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+        }
+        .menn{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            position: relative;
+            top: 12px;
+            left: 20px;
+            font-size: 18px;
+        }
+        .closebtn {
+            background: none;
+            border: none;
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            align-self: center;
+        }
+        .no-noti {
+            background: #f44336;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin-left: 220px;
+            margin-top: -15px;
+        }
+
+        p {
+            text-align: right;
+            color: aliceblue;
+        }
+
+        .lin {
+            text-decoration: none;
+            color: green;
+        }
+
+        section {
+            display: flex;
+            height: 500px;
+        }
+
+        .novedades {
+            width: 50%;
+            height: 90%;
+            background: gray;
+            border-radius: 20px;
+            margin-top: 50px;
+            position: relative;
+            left: 200px;
+        }
+
+        h3,
+        h4 {
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .lin2 {
+            margin: 40px;
+            text-decoration: none;
+            color: green;
+        }
+
+        .imagenes1 {
+            display: flex;
+            margin: 40px;
+
+
+        }
+
+        img {
+            border-radius: 10px;
+            width: 110px;
+
+        }
+
+        .img1 {
+            border-radius: 10px;
+            width: 110px;
+            margin-left: 20px;
+        }
+
+        .imagenes2 {
+            display: flex;
+            margin: 40px;
+            margin-top: -20px;
+        }
+
+        .img2 {
+            border-radius: 10px;
+            width: 110px;
+            margin-left: 20px;
+        }
+
+        .pie {
+            /*Estilo del pie de pagina de LEASEHUB*/
+            margin-top: 150px;
+            clear: both;
+            background: #6A6A6A;
+            padding: 20px;
+            font-family: Candara;
+            font-weight: 550;
+            color: white;
+            position: relative;
+            text-align: center;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+        }

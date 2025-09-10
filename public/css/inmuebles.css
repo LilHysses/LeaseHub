@@ -1,0 +1,67 @@
+/* Estilo moderno de tarjetas reutilizando clases existentes */
+
+/* Contenedor general de la tarjeta */
+.card-publi {
+    width: 100%;
+    max-width: 300px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    margin: 15px;
+    vertical-align: top;
+  }
+  
+  .card-publi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen del inmueble */
+  .card-publi img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card-publi:hover img {
+    transform: scale(1.08);
+  }
+  
+  /* Contenido interno de la tarjeta */
+  .card-content2 {
+    padding: 20px;
+  }
+  
+  /* Título del inmueble */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 10px;
+  }
+  
+  /* Dirección del inmueble */
+  .card-description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 0 0 15px;
+  }
+  
+  /* Precio del inmueble */
+  .card-price {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }

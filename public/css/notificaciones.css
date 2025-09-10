@@ -1,0 +1,396 @@
+/* Página de Notificaciones */
+
+/* Título principal */
+.titleNoti {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin: 30px 0 40px 0;
+    position: relative;
+    letter-spacing: 1px;
+    right: 200px;
+}
+
+.titleNoti::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981, #20c997);
+    border-radius: 2px;
+}
+
+/* Contenedor principal de notificaciones */
+.boxNoti {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    right: 200px;
+}
+
+.notifi {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjeta de notificación individual */
+.notifi1 {
+    width: 1000px;
+    background: #eaeaea;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #10b981;
+    position: relative;
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Diferentes colores para diferentes tipos de notificación */
+.notifi1:has(.menn:contains("comentarios")) {
+    border-left-color: #3498db;
+}
+
+.notifi1:has(.menn:contains("cancelada")) {
+    border-left-color: #e74c3c;
+    background: linear-gradient(135deg, #ffffff 0%, #fdf2f2 100%);
+}
+
+.notifi1:has(.menn:contains("aceptada")) {
+    border-left-color: #27ae60;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.notifi1:has(.menn:contains("nueva cita")) {
+    border-left-color: #f39c12;
+    background: linear-gradient(135deg, #ffffff 0%, #fffbf0 100%);
+}
+
+/* Mensaje principal de la notificación */
+.menn {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 30px;
+}
+
+.menn::before {
+    content: '🔔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3rem;
+}
+
+/* Iconos específicos por tipo de notificación */
+.notifi1:has(.menn:contains("comentarios")) .menn::before {
+    content: '💬';
+}
+
+.notifi1:has(.menn:contains("cancelada")) .menn::before {
+    content: '❌';
+}
+
+.notifi1:has(.menn:contains("aceptada")) .menn::before {
+    content: '✅';
+}
+
+.notifi1:has(.menn:contains("nueva cita")) .menn::before {
+    content: '📅';
+}
+
+/* Lista de acciones */
+.notifi1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.notifi1 li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.notifi1 li:last-child {
+    border-bottom: none;
+}
+
+/* Enlaces de reserva */
+.enlace-reserva {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.enlace-reserva:hover {
+    color: #ffffff;
+    background: #10b981;
+    transform: translateX(5px);
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.enlace-reserva strong {
+    font-weight: 700;
+}
+
+/* Botón para mostrar motivo (modal) */
+.changeN {
+    background: linear-gradient(45deg, #10b981, #20c997);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.changeN:hover {
+    background: linear-gradient(45deg, #059669, #10b981);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Botón cerrar (X) */
+.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closebtn:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+.closebtn:active {
+    transform: scale(0.95);
+}
+
+/* Estado sin notificaciones */
+.no-noti {
+    text-align: center;
+    padding: 60px 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    color: #6c757d;
+    font-size: 1.1rem;
+    position: relative;
+    border: 2px dashed #dee2e6;
+}
+
+.no-noti::before {
+    content: '📭';
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.no-noti::after {
+    content: 'Cuando tengas nuevas notificaciones aparecerán aquí.';
+    display: block;
+    font-size: 0.9rem;
+    color: #adb5bd;
+    margin-top: 10px;
+}
+
+/* Modal personalizado para motivos */
+.modal-content.act-1 .modal-header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.modal-content.act-1 .modal-body {
+    padding: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.modal-content.act-1 .modal-body p {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Formularios ocultos */
+.notifi1 form {
+    margin: 0;
+}
+
+.notifi1 input[type="hidden"] {
+    display: none;
+}
+
+/* Efectos de carga y transiciones */
+.notifi1.removing {
+    animation: slideOutRight 0.5s ease-in forwards;
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Contador de notificaciones (si lo necesitas) */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .titleNoti {
+        font-size: 2rem;
+        margin: 20px 0 30px 0;
+    }
+    
+    .boxNoti {
+        padding: 0 15px;
+    }
+    
+    .notifi1 {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .menn {
+        font-size: 1.1rem;
+        padding-left: 25px;
+    }
+    
+    .menn::before {
+        font-size: 1.1rem;
+    }
+    
+    .enlace-reserva {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .closebtn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .no-noti {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleNoti {
+        font-size: 1.8rem;
+    }
+    
+    .notifi1 {
+        padding: 15px;
+    }
+    
+    .menn {
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+    
+    .changeN {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .enlace-reserva {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Efectos adicionales */
+.notifi1:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.notifi1:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+/* Hover effect para toda la notificación */
+.notifi1:hover .menn {
+    color: #10b981;
+}
+
+.notifi1:hover .enlace-reserva {
+    transform: translateX(3px);
+}
+
+/* Indicador de nueva notificación */
+.notifi1.nueva {
+    position: relative;
+    overflow: hidden;
+}
+
+.notifi1.nueva::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    animation: shimmer 2s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}

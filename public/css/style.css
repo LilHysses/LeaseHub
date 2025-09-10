@@ -1,0 +1,1083 @@
+
+.justificar {
+  /*Estilo del parrafo del contenido principal sobre LEASEHUB*/
+  text-align: justify;
+  width: 550px;
+  margin-left: 358px;
+  font-size: 20px;
+}
+
+
+.enlaces {
+  /*Estilo de Animacion de los enlaces de inicio, inmuebles y servicios del menu de la pagina*/
+  font-size: 25px !important;
+  transition: transform 0.3s ease;
+}
+
+.enlaces:hover {
+  transform: scale(1.1);
+}
+
+.listimagen {
+  /*Estilo de las listas de items que brinda la pagina*/
+  list-style: none;
+  display: inline;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.listimagen2 {
+  margin-right: 240px;
+  display: inline;
+}
+
+
+.iconob {
+  /*Estilo de las imagenes de los botones del formulario del encabezado*/
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.iconob-left {
+  margin-right: 10px;
+  /* Espacio entre el botón de búsqueda y el input */
+}
+
+
+/*Estilos del Carrusel principal de inmuebles destacados*/
+.hi-slide {
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin-left: 100px;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border-radius: 50px;
+
+
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  transition: all 0.6s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+  opacity: 1;
+  background-color: green;
+}
+
+.hi-slide .hi-prev {
+  left: -60px;
+}
+
+.hi-slide .hi-prev::before {
+  content: '<';
+}
+
+.hi-slide .hi-next {
+  right: -60px;
+}
+
+.hi-slide .hi-next::before {
+  content: '>';
+}
+
+.hi-slide>ul {
+  list-style: none;
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 0;
+  padding: 0;
+}
+
+.hi-slide>ul>li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 377px;
+  top: 146px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #fff;
+  background-color: #333;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.hi-slide>ul>li>img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.botones {
+  /*Estilo del boton consultar aqui del carrusel principal*/
+
+  position: absolute;
+  margin-top: 245px;
+  margin-left: 50px;
+  border-radius: 20px;
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  color: white;
+}
+
+.carousel-aside {
+  /*Estilos de los carruseles de cerca de tu ubicacion y publicidad en el aside derecho */
+  position: absolute;
+  top: 850px;
+  /* Ajusta según sea necesario para que el aside esté debajo del menú de navegación */
+  right: 20px;
+  /* Espacio desde el borde derecho de la página */
+  width: 340px;
+  /* Ajustado al tamaño del carrusel */
+  padding: 10px;
+}
+
+.carousel-inner img {
+  width: 30px;
+  /* Ancho de la imagen */
+  height: 200px;
+  /* Altura de la imagen */
+  object-fit: cover;
+  /* Ajusta la imagen para que se adapte al contenedor */
+  border-radius: 10px;
+}
+#publicidad1{
+  position: fixed;
+  margin-top: -600px;
+}
+
+.modal>.header {
+  /*Estilo de ventana modal cuando undes el icono de perfil*/
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  /*Estilo del boton cerrar de la ventana modal*/
+  position: absolute;
+  top: 10px;
+  /* Espaciado desde la parte superior */
+  right: 10px;
+  /* Espaciado desde el borde derecho */
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Modal buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#login-btn {
+  /*Estilo del boton iniciar sesion de la ventana modal*/
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  color: white;
+  border-radius: 20px;
+  font-family: Verdana;
+  padding: 7px;
+  cursor: pointer;
+}
+
+#register-btn {
+  /*Estilo del boton registrarse de la ventana modal*/
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  color: white;
+  border-radius: 20px;
+  font-family: Verdana;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.modal-content2 {
+  /*Estilo del contenido de la ventana modal de Registro*/
+  margin-left: 60px;
+  margin-top: 150px;
+  padding: 200px;
+  padding-right: 1000px;
+  padding-bottom: 90px;
+  padding-left: 50px;
+  padding-top: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  position: relative;
+}
+
+/* Clase para el botón de cerrar del segundo modal */
+.close-register {
+  position: absolute;
+  top: 20px;
+  /* Ajusta según sea necesario */
+  right: 20px;
+  /* Ajusta según sea necesario */
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.close-register:hover,
+.close-register:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-content3 {
+  /*Estilo del contenido de la ventana modal de iniciar sesion*/
+  margin-left: 1220px;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  position: relative;
+  /* Necesario para la posición del botón de cerrar */
+}
+
+/* Estilo del botón de cerrar para el tercer modal */
+.close-login {
+  position: absolute;
+  top: 10px;
+  /* Asegura que el botón esté dentro del padding */
+  right: 10px;
+  /* Asegura que el botón esté dentro del padding */
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-login:hover,
+.close-login:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Estilo del botón de confirmar inicio de sesión */
+#login-confirm-btn {
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  color: white;
+  border-radius: 20px;
+  font-family: Verdana;
+  padding: 7px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.modal-content4 {
+  /*Estilo del contenido de la ventana modal de recuperar contraseña*/
+  margin-left: 1220px;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  position: relative;
+  /* Necesario para la posición del botón de cerrar */
+}
+
+.close-recup {
+  position: absolute;
+  top: 10px;
+  /* Asegura que el botón esté dentro del padding */
+  right: 10px;
+  /* Asegura que el botón esté dentro del padding */
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-recup:hover,
+.close-recup:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.tituloRe {
+  /*Estilo del titulo de registro de usuario de la ventana modal de registro*/
+  color: white;
+  text-align: left;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.imgPerfil {
+  /*Estilo de la imagen de perfil de la ventana modal de registro*/
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.form-grid {
+  /*Estilo del formulario de la ventana modal de registro*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Dos columnas de igual ancho */
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: span 2;
+  /* Hace que el textarea ocupe todo el ancho disponible */
+}
+
+.campo,
+textarea,
+select {
+  padding: 5px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+#register-confirm-btn {
+  /*Estilo del boton de confirmar registro de la ventana modal de registro*/
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  color: white;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+#changeImageLink {
+  /*Estilo del enlace de cambiar imagen de la ventana modal de registro*/
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+#section-publi {
+  width: 1233px;
+    height: 789px;
+    margin-left: 200px;
+    margin-top: -57px;
+}
+
+
+
+
+#recup-btn {
+  background: none;
+  color: white;
+  border: none;
+  text-decoration: underline white;
+}
+
+.content-queja {
+  position: relative;
+  top: 200px;
+  right: 380px;
+  background-color: gray;
+  height: 400px;
+  margin-bottom: 500px;
+  border-radius: 20px;
+  color: white;
+  width: 500px;
+  font-size: 20px;
+}
+
+
+
+/*Estilos de quejas.php*/
+.content-queja {
+  position: absolute;
+  bottom: 100px;
+  left: 420px;
+  height: 350px;
+  margin-top: 100px;
+  margin-bottom: 500px;
+  border-radius: 20px;
+  color: white;
+  width: 500px;
+  font-size: 20px;
+  background: none;
+}
+
+.fondo-quejas {
+  width: 100%;
+  height: 800px;
+  background-image: url("/public/img/Quejas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cajaTexto {
+  border-top: 1px #fff;
+  background-color: transparent;
+  color: aliceblue;
+  width: 300px;
+  height: 250px;
+}
+
+/* From Uiverse.io by adamgiebl */
+.buttonqueja {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.buttonqueja span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonqueja svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.buttonqueja:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.buttonqueja:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.buttonqueja:hover span {
+  transform: translateX(5em);
+}
+
+.buttonqueja:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+article {
+  position: relative;
+  width: 450px;
+  /* Aumento del ancho */
+  height: 600px;
+  /* Aumento de la altura */
+  transition: all .3s ease;
+  overflow: hidden;
+  /* Asegura que los elementos no se desborden fuera del artículo */
+  margin-left: 70px;
+}
+
+article img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+article img:last-child {
+  position: absolute;
+  width: 300px;
+  /* Tamaño de la imagen secundaria */
+  bottom: 10px;
+  /* Ajustamos la posición para que se vea bien */
+  left: 50%;
+  transform: translateX(-50%) translateY(25%);
+  transition: .3s ease;
+  opacity: 0;
+  /* Inicialmente invisible */
+}
+
+article h3 {
+  position: absolute;
+  top: 40%;
+  /* Ajuste para dejar espacio para el h4 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 28px;
+  /* Aumento del tamaño del texto */
+  font-weight: bold;
+  opacity: 0;
+  /* Inicialmente invisible */
+  transition: opacity .3s ease;
+  z-index: 2;
+  /* Asegura que el texto esté encima de las imágenes */
+}
+
+article h4 {
+  position: absolute;
+  top: 65%;
+  /* Aumento de espacio para que quede debajo del h3 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  /* Tamaño del texto */
+  opacity: 0;
+  /* Inicialmente invisible */
+  transition: opacity .3s ease;
+  z-index: 2;
+  /* Asegura que el texto esté encima de las imágenes */
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: 1;
+  /* Asegura que el degradado esté por debajo del texto */
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateX(-50%) translateY(10%);
+}
+
+article:hover h3 {
+  opacity: 1;
+}
+
+article:hover h4 {
+  opacity: 1;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+/*Inicio Estilo Publicaciones*/
+/*.card-publi {
+  width: 230px;
+  background: rgb(68,224,206);
+  background: linear-gradient(90deg, rgba(68,224,206,1) 26%, rgba(143,226,75,1) 100%);
+  border-radius: 30px;
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: -30%;
+}
+.card-publi img {
+  width: 200px;
+  border-radius: 25px;
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 90%;
+  height: 200px;
+  object-fit: cover; 
+  transition: transform 0.3s ease;
+   
+}
+.card-public img:hover {
+  transform: scale(1.1);
+}
+.card-content2 {
+color: white;
+  padding: 0;
+  padding-top: 0%;
+}
+.fila1 .card p{
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: fantasy;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  margin-right: 25px;
+}
+.card-publi h2{
+  font-size: 25px;
+  font-family: fantasy;
+  margin-left: 0px;
+}*/
+.contenido1{
+  background-color: #6A6A6A;
+  border-radius: 5%;
+  margin-bottom: 5px;
+  max-width: 700px;
+  
+  flex: 1; /* Toma el 50% del ancho del contenedor */
+  overflow: auto; /* Agrega scroll si el contenido excede el tamaño */
+  height: 700px; /* Asegura que ocupe toda la altura de la pantalla */
+  padding: 10px; /* Espaciado interno */
+}
+.fila1{
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 0px;
+}
+.fila2{
+  margin-left: 20px;
+  margin-top: 30px;
+ 
+}
+.fila3{
+  margin-left: 20px;
+  margin-top: 30px;
+  
+}
+.contenido2{
+  background-color: #6A6A6A;
+   border-radius: 5%;
+   margin-bottom: 5px;
+   max-width: 700px;
+   margin-left: 800px;
+   margin-top: -700px;
+   flex: 1; /* Toma el 50% del ancho del contenedor */
+   overflow-y: auto;
+   overflow-x: hidden; /* Agrega scroll si el contenido excede el tamaño */
+   height: 700px; /* Asegura que ocupe toda la altura de la pantalla */
+   width: 700px;
+   padding: 10px; /* Espaciado interno */
+ }
+ .fila1_1{
+  margin: 1cm;
+  display: flex;
+}
+.imgPublic{ /*Estilo de la imagen de perfil de la ventana modal de registro*/
+  display: block;
+  margin: 0 auto 20px;
+  width: 300px;
+  border-radius: 20px;
+  margin-left: -0.5cm;
+}
+
+#recipient-name{
+  width: 300px;
+  border-radius: 20px;
+  background: rgb(68, 224, 206);
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+}
+
+#letras-publicacion{
+  color: white;
+  font-size: 15px;
+}
+
+/*Fin Estilo Publicaciones*/
+
+
+/*Inicio de estilos de inmuebles.php*/
+/*.cardinmuebles {
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  overflow: hidden;
+  margin: 20px;
+  transition: 0.3s ease;
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  margin-left: 50px;
+  border-radius: 20px;
+}
+
+.cardinmuebles img {
+  width: 90%;
+  height: auto;
+  transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cardinmuebles img:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 15px;
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+}
+
+.card-price {
+  font-size: 1.2em;
+  color: #e74c3c;
+  margin: 0;
+}*/
+
+.rating {
+  display: flex;
+  direction: rtl;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.rating .star {
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 2px;
+  position: relative;
+}
+
+.rating .star:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.rating .star.empty {
+  color: #ccc;
+}
+
+
+.listas {
+  display: flex;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.listas>.boton {
+  margin-right: 80px;
+}
+
+.listas2 {
+  display: flex;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.listas2>.boton {
+  margin-right: 80px;
+}
+
+.ima {
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.boton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+
+}
+
+.listas select {
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+.listas select:hover {
+  transform: scale(1.1);
+
+}
+
+.listas2 select {
+  font-size: 25px;
+}
+
+.tarjetas1 {
+  width: 1400px;
+
+}
+
+.tarjetas2 {
+  width: 1100px;
+}
+
+.grupo-filtros {
+  display: inline-block;
+  position: relative;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0px;
+  left: 20px;
+  padding-top: -100px;
+  margin-top: -100px;
+}
+
+.grupo-filtros .menu-horizontal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.grupo-filtros .menu-horizontal > li {
+  position: relative;
+}
+
+.grupo-filtros .menu-horizontal > li > a {
+  display: block;
+  background-color: #fff;
+
+  border-radius: 6px;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.grupo-filtros .menu-horizontal > li:hover .menu-vertical {
+  display: block;
+}
+
+.grupo-filtros .menu-vertical {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 10;
+  min-width: 100%;
+}
+
+.grupo-filtros .menu-vertical li {
+  display: block;
+}
+
+.grupo-filtros .menu-vertical button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.grupo-filtros .menu-vertical button:hover {
+  background-color: #f0f0f0;
+}
+
+/*Fin de estilos de inmuebles.php*/
+
+/*carrusel*/
+
+/*Filtro de inmubeles*/
+#filtro-inmuebles{
+  display: flex;
+
+}
+
+/*filtros*/
+#filtro-inmuebles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0px; /* bien pegado */
+  padding: 10px 20px;
+}
+
+#filtro-inmuebles form {
+  display: inline-block;
+}
+
+#filtro-inmuebles select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 12 12"%3E%3Cpath fill="%23008000" d="M6 9l-3-3h6z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 5px center; /* separa la flecha */
+  padding: 6px 50px 6px 10px; /* deja espacio a la derecha para la flecha */
+  color: black;
+  margin: 0;
+}
+
+.menu-horizontal-filtro {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-horizontal-filtro li {
+  position: relative;
+}
+
+.menu-horizontal-filtro > li > a {
+  display: inline-block;
+  font-size: 25px;
+  font-family: sans-serif;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="45" height="45" margin-bottom="10" viewBox="0 0 12 12"%3E%3Cpath fill="%23008000" d="M6 9l-3-3h6z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  padding: 40px 50px 6px 10px;
+  cursor: pointer;
+  color: black;
+  margin: 0;
+  margin-left: 60px;
+}
+
+.menu-vertical-filtro {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 100;
+}
+
+.menu-horizontal-filtro li:hover .menu-vertical-filtro {
+  display: block;
+}
+
+.menu-vertical-filtro button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: black;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-vertical-filtro button:hover {
+  background-color: #d8f5db;
+}
+
+.filtro-desplegable {
+  display: inline-block;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: black !important;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 12 12"%3E%3Cpath fill="%23008000" d="M6 9l-3-3h6z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  padding: 6px 50px 6px 10px;
+  margin: 0;
+
+}
+
+#boton-filtro{
+  border-radius: 20px;
+  background: rgb(68, 224, 206);
+  background: linear-gradient(90deg, rgba(68, 224, 206, 1) 26%, rgba(143, 226, 75, 1) 100%);
+  color: white;
+   border: none;
+   width: 80px;
+}
+.btn-ver-perfil {
+  background-color: #0066ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-perfil:hover {
+  background-color: #004bb5;
+  color: #fff;
+}
